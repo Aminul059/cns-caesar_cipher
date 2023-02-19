@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNS Project</title>
+    <script src="https://kit.fontawesome.com/6527e30916.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cns.css">
+    <style>
+      
+input{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48 97 88);
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 7px 7px 5px rgba(12, 14, 16, 0.3);
+    padding: 3px 6px;
+    color: white;
+    
+    
+    border-radius: 5px;
+}
+input:hover{
+    box-shadow: 5px 4px solid purple;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    background-color: rgb(117, 117, 218);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 4px solid lightskyblue;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#encrypt{
+    color:#510b02;
+    
+}
+.e{
+    color: orangered;
+}
+i{
+    color:mintcream;
+}
+    </style>
+</head>
+<body>
+    <h1>Message <span id="encrypt"><span class="e">E</span>ncryption</span></h1>
+    <p>Enter Your Text: <input type="text" placeholder="please enter your text!" id="message"></p>
+    <p>Enter a key: <input type="number" max="25" placeholder="please enter a key!" id="shift"></p>
+
+    <a onclick="encryptMessage()">Encrypt <i class="fa-solid fa-lock"></i></a>
+    <p>Encrypted message: <span id="encryptedMessage"></span></p>
+
+    <script>
+      function encryptMessage() {
+    var message = document.getElementById("message").value;
+    var shift = parseInt(document.getElementById("shift").value);
+    var encryptedMessage = "";
+    for (var i = 0; i < message.length; i++) {
+      var char = message.charCodeAt(i);
+      if (char >= 65 && char <= 90) {
+        encryptedMessage += String.fromCharCode((char - 65 + shift) % 26 + 65);
+      } else if (char >= 97 && char <= 122) {
+        encryptedMessage += String.fromCharCode((char - 97 + shift) % 26 + 97);
+      } else {
+        encryptedMessage += message.charAt(i);
+      }
+    }
+    document.getElementById("encryptedMessage").innerHTML = encryptedMessage;
+  }
+    </script>
+    
+  </body>
+</html>

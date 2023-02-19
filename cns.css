@@ -1,0 +1,43 @@
+
+input{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(48 97 88);
+    font-size: 16px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    box-shadow: 7px 7px 5px rgba(12, 14, 16, 0.3);
+    padding: 3px 6px;
+    color: white;
+    
+    
+    border-radius: 5px;
+}
+input:hover{
+    box-shadow: 5px 4px solid purple;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    background-color: rgb(117, 117, 218);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 2px 4px solid lightskyblue;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#encrypt{
+    color:#510b02;
+    
+}
+.e{
+    color: orangered;
+}
+i{
+    color:mintcream;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CNS Project</title>
+        <script src="https://kit.fontawesome.com/6527e30916.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="cns.css">
+    
+    </head>
+<body>
+    <div>
+        <h1>Message <span id="encrypt"><span class="e">E</span>ncryption</span></h1>
+        <p>Enter Your Text: <input type="text" placeholder="please enter your text!" id="message"></p>
+        <p>Enter a key: <input type="number" max="25" placeholder="please enter a key!" id="shift"></p>
+      
+        <a onclick="encryptMessage()">Encrypt <i class="fa-solid fa-lock"></i></a>
+        <p>Encrypted message: <span id="encryptedMessage"></span></p>
+      </div>
+      <script src="cns.js"></script>
+</body>
+</html>

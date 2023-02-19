@@ -17,7 +17,7 @@ input{
 input:hover{
     box-shadow: 5px 4px solid purple;
 }
-body{
+body {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,4 +40,17 @@ a{
 }
 i{
     color:mintcream;
+}
+.dec{
+    margin-right: 50px;
+    padding-right: 100px;
+}
+.main-class{
+    margin: 30px 20px;
+}
+.main-class a{
+    text-decoration: none;
+}
+.main-body{
+    margin-top: 50px;
 }

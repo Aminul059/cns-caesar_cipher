@@ -30,6 +30,7 @@ a{
     box-shadow: 2px 4px solid lightskyblue;
     padding: 5px 10px;
     cursor: pointer;
+    text-decoration: none;
 }
 #encrypt{
     color:#510b02;
